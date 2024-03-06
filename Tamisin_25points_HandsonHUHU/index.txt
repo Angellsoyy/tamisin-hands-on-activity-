@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Number Generator</title>
+</head>
+<body>
+    <h1>Random Number Generator</h1>
+    <p> Let's generate a random number!!!</p>
+    <div id="output"></div>
+    <script>
+        function genRandNum() {
+            var randNum = Math.floor(Math.random() * 1000);
+            document.getElementById('output').innerHTML = '<p>Randomly generated number: ' + randNum + '</p>';
+            var h = Math.floor(randNum / 100);
+            var t = Math.floor((randNum % 100) / 10);
+            var o = randNum % 10;
+            document.getElementById('output').innerHTML += '<p>Breakdown: ' + h + '00, ' + t + '0, ' + o + '</p>';
+        }
+        genRandNum();
+    </script>
+</body>
+</html>
